@@ -49,9 +49,9 @@ const doCmd = function (params) {
  */
 program
   .version(`randomatic-cli ${version}`)
-  .option('-p, --pattern [pattern]', 'the pattern to use for randomizing.')
+  .option('-p, --pattern [pattern]', 'the pattern to use for randomizing, [a], [A], [0], [!], [*], [?], default: [0Aa]')
   .option('-l, --length [length]', 'the length of the string to generate.', Number.parseInt)
-  .option('-c, --count [count]', 'randomize count', Number.parseInt)
+  .option('-c, --count [count]', 'randomize count.', Number.parseInt)
   .option('-C, --chars [chars]', 'define a custom string to be randomized.')
   .parse(process.argv);
 
