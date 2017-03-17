@@ -1,0 +1,12 @@
+.DS_Store
+
+# Jetbrains
+.idea/
+
+# Node.JS
+npm-debug.log*
+node_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-worksapce

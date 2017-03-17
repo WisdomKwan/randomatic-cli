@@ -1,0 +1,30 @@
+{
+  "name": "randomatic-cli",
+  "version": "0.0.1",
+  "description": "randomatic command line interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "bin": {
+    "randomatic": "./bin/randomatic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WisdomKwan/randomatic-cli.git"
+  },
+  "keywords": [
+    "random",
+    "randomatic"
+  ],
+  "author": "Wisdom Kwan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WisdomKwan/randomatic-cli/issues"
+  },
+  "homepage": "https://github.com/WisdomKwan/randomatic-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "randomatic": "^1.1.6"
+  }
+}
