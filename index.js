@@ -75,10 +75,8 @@ if (program.chars) {
 }
 
 // exec randomize function
-console.log('\r');
+let result = new Array(params.count);
 for (let i=0; i<params.count; i++) {
-  const prefix = i == 0 ? 'randomize: ' : '           ';
-  const result = prefix + doCmd(params);
-  console.log(result);
+  result[i] = doCmd(params);
 }
-console.log('\r');
+console.log(JSON.stringify({ randomatic: result }, null, '  '));
