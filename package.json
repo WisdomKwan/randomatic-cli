@@ -9,6 +9,9 @@
   "bin": {
     "randomatic": "./bin/randomatic"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WisdomKwan/randomatic-cli.git"
