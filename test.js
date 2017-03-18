@@ -4,12 +4,23 @@
 
 'use strict';
 
-const randomize = require('randomatic');
+const spawn = require('child_process').spawn;
+const randomatic = spawn('./bin/randomatic', ['-l', 16, '-c', 6]);
 
-console.log('\r');
-for (let i=0; i<5; i++) {
-  const prefix = i == 0 ? 'randomize: ' : '           ';
-  const result = prefix + randomize('0Aa', 16);
-  console.log(result);
-}
-console.log('\r');
+randomatic.stdout.on('data', function (data) {
+  console.log(data.toString());
+});
+
+randomatic.stderr.on('data', function (data) {
+  console.log(`randomatic stderr: ${data}`);
+});
+
+randomatic.on('close', function (code) {
+  if (code != 0) {
+    console.log(`randomatic exit code: ${code}`);
+  }
+});
+
+randomatic.on('error',  function (err) {
+  console.log(`randomatic start failed!\n${err}`);
+});

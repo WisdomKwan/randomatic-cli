@@ -17,6 +17,11 @@ const paramsDefault = {
   },
 };
 
+/**
+ * generate random string with command args.
+ * @param {Object} params
+ * @return {String}
+ */
 const doCmd = function (params) {
   if (params.pattern === '?') {
     return randomize('?', params.length, params.options);
