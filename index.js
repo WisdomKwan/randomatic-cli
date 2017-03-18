@@ -18,6 +18,15 @@ const paramsDefault = {
 };
 
 /**
+ * use pattern param set random string length.
+ * @param {String} pattern
+ * @return {boolean}
+ */
+const lengthByPattern = function (pattern) {
+  return false;
+};
+
+/**
  * generate random string with command args.
  * @param {Object} params
  * @return {String}
@@ -25,6 +34,9 @@ const paramsDefault = {
 const doCmd = function (params) {
   if (params.pattern === '?') {
     return randomize('?', params.length, params.options);
+  }
+  else if (lengthByPattern(params.pattern)) {
+    return randomize(params.pattern);
   }
   return randomize(params.pattern, params.length);
 };
