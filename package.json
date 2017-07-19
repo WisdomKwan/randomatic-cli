@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/WisdomKwan/randomatic-cli#readme",
   "dependencies": {
-    "commander": "^2.9.0",
-    "randomatic": "^1.1.6"
+    "commander": "^2.11.0",
+    "randomatic": "^1.1.7"
   }
 }
